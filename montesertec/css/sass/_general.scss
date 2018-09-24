@@ -1,0 +1,31 @@
+body{
+	padding-top: 99px;
+}
+
+.max-content{
+	width: 90%;
+	max-width:1180px;
+	display: block;
+	margin: 0 auto;
+
+	&.small{
+		max-width: 770px;
+	}
+}
+
+.sectionTitle{
+	font-family: $font-sec;
+	font-weight: bold;
+	font-size: 28px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $color-secu;
+}
+
+.noBorder{
+	border:none !important;
+}
+
+.borderSection{
+	border-bottom: 8px solid #e7e9eb;
+}

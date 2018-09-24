@@ -1,0 +1,59 @@
+<div class="bannerSection contact_page" >
+	<div class="content">
+		<div scroll-banner>
+			<h1 class="bigTitle">Fale conosco</h1>
+		</div>
+	</div>
+</div>
+
+<div class="max-content sectionContent pageWithForm borderSection">
+	<div class="max-content">
+
+		<div class="formBox">
+			<p>Para a Monsertec, sua opinião é muito importante. Por isso, criamos canais diretos de comunicação. Para enviar suas críticas, elogios, dúvidas e opiniões preencha o formulário abaixo: </p>
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">Nome</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">E-mail</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			<div class="line">
+				<fieldset class="size30">
+					<h3 class="subTitle">Estado</h3>
+					<input type="text" />
+				</fieldset>
+				<fieldset class="size70">
+					<h3 class="subTitle">Cidade</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">Mensagem</h3>
+					<textarea></textarea>
+				</fieldset>
+			</div>
+
+			<div ng-class="{'active' : submitStep == 1, 'success' : submitStep==2}" ng-click="trySubmit()" class="submitButton">
+				<div class="content">
+					<h1 ng-if="submitStep < 2">Enviar</h1>
+					<h1 ng-if="submitStep == 2" class="feedback">Enviado <img src="imgs/ok.png" alt=""></h1>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="adressContent" ng-include="'views/elem-pages-contact-info.html'"></div>
+		
+		<div class="clearfix"></div>
+	</div>
+</div>

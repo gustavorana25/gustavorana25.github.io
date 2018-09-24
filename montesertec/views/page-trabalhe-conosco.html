@@ -1,0 +1,77 @@
+<div class="bannerSection work">
+	<div class="content">
+		<div scroll-banner>
+			<h1 class="bigTitle">Trabalhe conosco</h1>
+		</div>
+	</div>
+</div>
+
+<div class="max-content sectionContent pageWithForm borderSection">
+	<div class="max-content">
+		<p>A Monsertec sabe a importância de manter o ambiente de trabalho um espaço agradável, onde o profissional, além de cumprir suas tarefas, possa aprender e progredir. A vontade de vencer é estimulada, assim como a liderança e a iniciativa. Aqui os profissionais são reconhecidos pelas suas competências e recompensados por suas contribuições aos negócios.</p>
+		<p>A Monsertec proporciona à sua equipe um ambiente repleto de desafios que geram oportunidades de crescimento pessoal e profissional. Para atrair os profissionais do mercado, a empresa acredita que a qualidade de vida deve ser preservada e que o respeito e a dignidade são características fundamentais para o âmbito profissional.</p>
+		<p>A empresa procura investir nos funcionários para que eles cresçam e isso seja revertido em benefícios para ambos - funcionários e empresa. Isto só é possível porque prezamos por valores básicos como: Respeito à legislação, compromisso com a qualidade, tratamento uniforme à todos os integrantes, ética, formação e desenvolvimento profissional, abertura ao diálogo, saúde e segurança do trabalho.</p>
+		<p>Para incluir o seu currículo no nosso banco de dados, envie-nos utilizando o formulário abaixo:</p>
+
+		<div class="formBox">
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">Nome</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			<div class="line">
+				<fieldset class="size60">
+					<h3 class="subTitle">E-mail</h3>
+					<input type="text" />
+				</fieldset>
+				<fieldset class="size40">
+					<h3 class="subTitle">Telefone</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			<div class="line">
+				<fieldset class="size30">
+					<h3 class="subTitle">Estado</h3>
+					<input type="text" />
+				</fieldset>
+				<fieldset class="size70">
+					<h3 class="subTitle">Cidade</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">Anexar currículo</h3>
+					<button class="buttonUpload">
+						<input accept="application/pdf, application/msword" type="file" onchange="angular.element(this).scope().fileNameChanged(this)"/>
+						Procurar arquivo...
+					</button>
+					<span>{{fileName}}</span>
+						
+				</fieldset>
+			</div>
+
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">Mensagem</h3>
+					<textarea></textarea>
+				</fieldset>
+			</div>
+
+			<div ng-class="{'active' : submitStep == 1, 'success' : submitStep==2}" ng-click="trySubmit()" class="submitButton">
+				<div class="content">
+					<h1 ng-if="submitStep < 2">Enviar</h1>
+					<h1 ng-if="submitStep == 2" class="feedback">Enviado <img src="imgs/ok.png" alt=""></h1>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="adressContent" ng-include="'views/elem-pages-contact-info.html'"></div>
+		<div class="clearfix"></div>
+	</div>
+</div>

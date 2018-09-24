@@ -1,0 +1,60 @@
+<div class="headerTop">
+	<nav class="content max-content">
+		<a href="/#!/sobre/grupo-monsertec">Grupo Monsertec</a>
+		<a href="#">Monsertec Facilities</a>
+		<a href="#!/linha-etica">Linha Ética</a>
+		<a href="#!/trabalhe-conosco">Trabalhe Conosco</a>
+	</nav>
+</div>
+
+<div class="headerMain">
+	<div class="max-content content">
+		<a href="#">
+			<img src="imgs/logo.png" alt="">
+		</a>
+		<!-- Dropdown Menu -->
+		<div class="dropdownMenu">
+			<a href="#!/">Início</a>
+			<a href="#!/sobre/monsertec">Monsertec Engenharia</a>
+			<div ng-mouseover="drop = true" ng-mouseleave="drop = false" class="dropDownItem">
+				<h1>Serviços</h1>
+
+				<div class="dropDownBox" ng-show="drop">
+					<a href="#!/servico/isolamento-termico" class="dropElem">Isolante térmico</a>
+					<a href="#!/servico/acesso-andaimes" class="dropElem">Acesso/andaimes</a>
+					<a href="#!/servico/refratarios" class="dropElem">Refratários</a>
+					<a href="#!/servico/pintura-industrial" class="dropElem">Pintura industrial</a>
+				</div>
+			</div>
+			<a href="#!/fale-conosco">Fale conosco</a>
+		</div>
+	</div>
+</div>
+
+<div ng-init="showMenu = false; sub = false">
+	<div ng-class="{'active' : showMenu}" class="menuButton">
+		<div ng-click="showMenu = !showMenu; sub = false" ng-class="{'active' : showMenu}" class="menuIcon">
+			
+			<div>
+				<span class="a"></span>
+				<span class="b"></span>
+				<span class="c"></span>
+			</div>
+		</div>
+	</div>
+		
+	<nav class="menuLinks" ng-class="{'active' : showMenu}">
+		<a href="#!/" ng-click="sub = false;showMenu=false">Home</a>
+		<a href="#!/sobre/monsertec" ng-click="sub = false;showMenu=false">Monsertec Engenharia</a>
+		<a href="#!/sobre/grupo-monsertec" ng-click="sub = false;showMenu=false">Grupo Monsertec</a>
+		<a href="javascript:void(0)" ng-click="sub = !sub">Serviço</a>
+		<div>
+			<a href="#!/servico/isolamento-termico" class="sub" ng-class="{'active' : sub}" ng-click="sub = false;showMenu=false">Isolante térmico</a>
+			<a href="#!/servico/acesso-andaimes" class="sub" ng-class="{'active' : sub}" ng-click="sub = false;showMenu=false">Acesso/andaimes</a>
+			<a href="#!/servico/refratarios" class="sub" ng-class="{'active' : sub}" ng-click="sub = false;showMenu=false">Refratários</a>
+			<a href="#!/servico/pintura-industrial" class="sub" ng-class="{'active' : sub}" ng-click="sub = false;showMenu=false">Pintura industrial</a>
+		</div>
+		<a href="#!/linha-etica" ng-click="sub = false;showMenu=false">Linha Ética</a>
+		<a href="#!/trabalhe-conosco" ng-click="sub = false;showMenu=false">Trabalhe Conosco</a>
+	</nav>
+</div>

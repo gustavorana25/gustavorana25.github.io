@@ -1,0 +1,81 @@
+<div class="bannerSection etica">
+	<div class="content">
+		<div scroll-banner>
+			<h1 class="bigTitle">Linha ética</h1>
+		</div>
+	</div>
+</div>
+
+<div class="max-content sectionContent pageWithForm borderSection">
+	<div class="max-content">
+		<p>O Código de Ética e Conduta da Monsertec tem o objetivo de estabelecer os princípios éticos e normas de conduta que devem orientar as relações internas e externas de todos Integrantes.</p>
+		
+		<a href="#!/">LER NOSSO CóDIGO de CONDUTA E ÉTICA</a>
+
+		<h1>Relatar uma violação do código de ética</h1>
+
+		<p>O canal de denúncia é disponibilizado pela Monsertec para que seus integrantes, terceiros, fornecedores, clientes e demais colaboradores possam, de forma segura e responsável, contribuir com informações para a manutenção de ambientes corporativos seguros, éticos, transparentes e produtivos.</p>
+
+		<div class="formBox">
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">QUAL A VIOLAÇÃO?</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">Quantas vezes a violação ocorreu?</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			<div class="line">	
+				<fieldset class="fullsize">
+					<h3 class="subTitle">Como, quando e onde há violação?</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">Quem são as pessoas e/ou empresas envolvidas ou testemunhas?</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">Qual seria a RAZÃO para que esta situação OCORRA?</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">HÁ valores monetários envolvidos?</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+			<div class="line">
+				<fieldset class="fullsize">
+					<h3 class="subTitle">Se existem provas/evidências, como podemos encontrá-las?</h3>
+					<input type="text" />
+				</fieldset>
+			</div>
+
+			
+			<div ng-class="{'active' : submitStep == 1, 'success' : submitStep==2}" ng-click="trySubmit()" class="submitButton">
+				<div class="content">
+					<h1 ng-if="submitStep < 2">Enviar</h1>
+					<h1 ng-if="submitStep == 2" class="feedback">Enviado <img src="imgs/ok.png" alt=""></h1>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="adressContent" ng-include="'views/elem-pages-contact-info.html'"></div>
+		<div class="clearfix"></div>
+	</div>
+</div>

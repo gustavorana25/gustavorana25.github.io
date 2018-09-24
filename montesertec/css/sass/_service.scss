@@ -1,0 +1,57 @@
+.TitleWhiteBox{
+	font-family: $font-sec;
+	text-transform: uppercase;
+	background: $color-base;
+	font-weight: bold;
+	font-size: 24px;
+	color: white;
+	padding: 8px 12px;
+	font-size: 13px;
+	
+	display: table;
+	margin: 0 auto 20px;
+}
+
+.sectionContent.service{
+	border-bottom: 8px solid #e7e9eb;
+	h3{
+		font-family: $font-sec;
+		color: $color-secu;
+		font-weight: bold;
+		font-size: 24px;
+		width: 70%;
+		margin: 0 auto 30px;
+	}
+	p{
+		line-height: 1.7;
+		font-size: 18px;
+		width: 70%;
+		margin: 0 auto 30px;
+		color: #767a7e;
+
+		strong{
+			font-family: $font-sec;
+			font-weight: bold;
+
+			&.red{
+				color: $color-base;
+			}
+		}
+	}
+
+	img{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	@media (max-width: 680px){
+		h3, p{
+			width: 100%;
+		}
+	}
+}
+
+.cardsImgText.other{
+	max-width: 900px;
+	margin:40px auto 0;
+}

@@ -1,0 +1,61 @@
+	<div class="slider" >
+	<div class="max-content">
+		<div ng-repeat="sl in slides track by $index" ng-class="{'active' : slideSelected == $index}" class="sliderContent" style="background-image: url(imgs/{{sl.img}}.jpg)" ng-swipe-left="set_slideSelected(slideSelected-1)" ng-swipe-right="set_slideSelected(slideSelected+1)">
+			<div class="content">
+				<h1>{{sl.title}}</h1>
+				<p>{{sl.content}}</p>
+				<a href="{{sl.link}}">Saiba mais</a>
+			</div>
+		</div>
+
+		<div class="navSlide next" ng-click="set_slideSelected(slideSelected+1)"></div>
+		<div class="navSlide prev" ng-click="set_slideSelected(slideSelected-1)"></div>
+
+		<div class="markers">
+			<span ng-repeat="sl in slides track by $index" ng-class="{'active' : slideSelected == $index}" ng-click="set_slideSelected($index)"></span>
+		</div>
+	</div>
+</div>
+
+<div class="max-content sectionContent">
+	<h1 class="sectionTitle">Serviços</h1>
+
+	<div class="cardsImgText">
+		<a href="#!/servico/isolamento" class="card" ng-include="'views/elem-card-isolamento.html'"></a>
+		<a href="#!/servico/acesso-andaimes" class="card" ng-include="'views/elem-card-acesso-andaimes.html'"></a>
+		<a href="#!/servico/refratarios" class="card" ng-include="'views/elem-card-refratario.html'"></a>
+		<a href="#!/servico/pintura-industrial" class="card" ng-include="'views/elem-card-pintura-industrial.html'"></a>
+	</div>
+</div>
+
+<div class="bannerSection diagonal about" ng-style="{'background-position-y' : 36-pixelsScrolled/5+'px'}">
+	<div class="content">
+		<div>
+			<h1>Monsertec Engenharia</h1>
+			<p>A Monsertec iniciou suas atividades no ano de 1997 na área de manutenção e montagem voltada para as indústrias Químicas, Petroquímicas, Celulose e Petróleo.  Atuando em todo o território nacional a Monsertec une o conhecimento técnico e a experiência dos seus integrantes, à excelência na execução de serviços de manutenção e montagem complementar sob diferentes níveis de complexidade. </p>
+			<a href="#">Saiba mais</a>
+		</div>
+	</div>
+</div>
+
+<div class="max-content sectionContent">
+	<div class="max-content">
+		<h1 class="sectionTitle">Nossos clientes</h1>
+		<div class="clientesLogos">
+			<div><img style="max-width: 135px;max-height: 65px;" src="imgs/client_001.png" alt=""></div>
+			<div><img style="max-width: 135px;max-height: 65px;" src="imgs/client_002.png" alt=""></div>
+			<div><img style="max-width: 135px;max-height: 65px;" src="imgs/client_003.png" alt=""></div>
+			<div><img style="max-width: 135px;max-height: 65px;" src="imgs/client_004.png" alt=""></div>
+			<div><img style="max-width: 135px;max-height: 65px;" src="imgs/client_005.png" alt=""></div>
+			<div><img style="max-width: 135px;max-height: 65px;" src="imgs/client_006.png" alt=""></div>
+			<div><img style="max-width: 135px;max-height: 65px;" src="imgs/client_007.png" alt=""></div>
+			<div><img style="max-width: 135px;max-height: 65px;" src="imgs/client_008.png" alt=""></div>
+			<div><img style="max-width: 135px;max-height: 65px;" src="imgs/client_009.png" alt=""></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="bannerSection contact" ng-include="'views/elem-fale.html'">
+
+</div>

@@ -1,0 +1,70 @@
+<div class="bannerSection group">
+	<div class="content">
+		<div scroll-banner>
+			<h1 class="bigTitle">Grupo Monsertec</h1>
+		</div>
+	</div>
+</div>
+
+<div class="headerAbout">
+	<div class="max-content small">
+		<a href="#!/sobre/monsertec">Monsertec engenharia</a>
+		<a href="#!/sobre/grupo-monsertec" class="active">Grupo monsertec</a>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+<div class="max-content sectionContent service noBorder">
+	<div class="max-content">
+		<h3>O grupo</h3>
+		<p>O <strong>Grupo Monsertec</strong> é uma organização empresarial brasileira, constituída a partir da empresa líder, a <strong class="red">Monsertec Engenharia.</strong></p>
+		<p>O grupo é formado por duas empresas: A <strong class="red">Monsertec Engenharia</strong>, que atua nos segmentos de construção, montagem e manutenção industrial, desenvolvendo atividades de isolamento térmico, acesso, pintura industrial, refratário e civil; e a <strong class="red">Monsertec Engenharia</strong> que é uma empresa de multisserviços focado nos segmentos industrial e comercial, prestando serviços de apoio às atividades de empreendimentos em geral, onde a maioria desses negócios possuem características de funcionamento ininterrupto.</p>
+
+		<div class="marcas">
+			<div>
+				<img src="imgs/logo_001.png" alt="">
+			</div>
+			<div>
+				<img src="imgs/logo_002.png" alt="">
+			</div>
+		</div>
+		<p>Com mais de 19 anos de atuação no mercado, o Grupo Monsertec possui uma marca de credibilidade e confiança, adquirida pela qualidade e segurança na prestação dos serviços oferecidos aos seus clientes.</p>
+		<p>O grupo  está sediado no Estado da Bahia, com atuação em vários estados do Brasil.</p>
+
+		<div class="historyLine">
+			<div class="content">
+				<h1>Linha de tempo</h1>
+				<nav>
+					<button class="rot" ng-click="set_hst(hst-1)"><img src="imgs/ico-arrow.png" alt=""></button>
+					<button ng-click="set_hst(hst+1)"><img src="imgs/ico-arrow.png" alt=""></button>
+				</nav>
+
+				<div class="cardsHist" ng-style="{'margin-left' : -280*hst+'px'}">
+					<div class="card" ng-class="{'active' : hst == 0}">
+						<h2>1997</h2>
+						<p>Início de atividades Monsertec Manutenção e Montagem - Atuação no polo petroquímico Bahia</p>
+					</div>
+					<div class="card" ng-class="{'active' : hst == 1}">
+						<h2>2011</h2>
+						<p>Expansão de atividades fora do estado da Bahia para Alagoas e Pernambuco</p>
+					</div>
+					<div class="card" ng-class="{'active' : hst == 2}">
+						<h2>2013</h2>
+						<p>Início de atuação nos estados Ceará e Maranhão</p>
+					</div>
+					<div class="card" ng-class="{'active' : hst == 3}">
+						<h2>2014</h2>
+						<p>Alteração do objeto social para Monsertec Engenharia</p>
+					</div>
+					<div class="card" ng-class="{'active' : hst == 4}">
+						<h2>2016</h2>
+						<p>Ampliação do portfólio de atividades do grupo com a criação da área de facilities</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="bannerSection contact" ng-include="'views/elem-fale.html'"></div>

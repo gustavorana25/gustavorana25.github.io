@@ -1,0 +1,293 @@
+.sectionContent.pageWithForm{
+	.max-content{
+		max-width: 860px;
+	}
+
+	.subTitle{
+		font-family: $font-sec;
+		font-weight: bold;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #767a7e;
+		margin-bottom: 8px;
+	}
+
+	h1{
+		font-family: $font-sec;
+		font-weight: bold;
+		font-size: 24px;
+		color: $color-secu;
+		margin-bottom: 30px;
+	}
+
+	a{
+		font-family: $font-sec;
+		font-weight: bold;
+		font-size: 14px;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 10px 40px;
+		background: $color-base;
+		margin-bottom: 30px;
+		display: inline-block;
+
+		&:hover{
+			background: $color-base-h;
+		}
+	}
+}
+
+.formBox{
+	float: left;
+	width: 60%;
+
+	.line{
+		margin-bottom: 20px;
+		display: flex;
+		display: -webkit-flex;
+
+		justify-content: space-between;
+		-webkit-justify-content: space-between;
+	}
+	
+	fieldset{
+		&.fullsize{
+			width: 100%;
+		}
+		&.size60{
+			width: calc(60% - 5px);
+		}
+		&.size30{
+			width: calc(30% - 5px);
+		}
+		&.size40{
+			width: calc(40% - 5px);
+		}
+		&.size60{
+			width: calc(60% - 5px);
+		}
+		&.size70{
+			width: calc(70% - 5px);
+		}
+		
+	}
+
+	input[type="text"], textarea{
+		font-size: 16px;
+		padding: 12px;
+		width: 100%;
+		border:1px solid #e5e5e5;
+		border-radius:6px;
+		resize:none;
+		line-height: 1.2;
+	}
+
+	textarea{
+		height: 230px;
+	}
+
+	.buttonUpload{
+		padding: 15px 25px;
+		border:none;
+		background: #7c8084;
+		border-radius: 6px;
+		color: #fff;
+		font-size: 13px;
+		position: relative;
+		margin-right: 10px;
+	}
+
+	input[type="file"]{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		opacity: 0;
+	}
+
+	span{
+		font-size: 14px;
+		color: #7c8084;
+		padding: 14px 0;
+	}
+
+	@media (max-width : 1024px){
+	    width: 100%;
+	}
+}
+
+.submitButton{
+	width: 100%;
+	height:50px;
+
+	@include centralize-contentflex();
+
+	.content{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		border-radius:6px;
+		background: $color-base;
+		@include transition(all ease-in-out 0.4s);
+		overflow: hidden;
+
+		@include centralize-contentflex();
+
+		h1{
+			color: #fff;
+			font-family: $font-sec;
+			font-weight: bold;
+			font-size: 14px;
+			text-transform: uppercase;
+			pointer-events: none;
+			margin: 0;
+
+			@include transition(all ease-in-out 0.1s);
+		}
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background: rgba(0,0,0,0.4);
+			border-radius:6px;
+
+			@include transition(all ease-in-out 10s);
+		}
+	}
+
+	&.active{
+		.content{
+			height: 30%;
+
+			&:before{
+				width: 98%;
+			}
+		}
+
+		h1{
+			@include transform(translateY(10px));
+			opacity: 0;
+		}
+	}
+
+	&.success{
+		.content{
+			height: 30%;
+
+			animation-name: heightSubmit;
+			animation-iteration-count:1;
+			animation-timing-function:ease-in-out;
+			animation-fill-mode:forwards;
+			animation-delay:0.4s;
+			animation-duration:0.4s;
+			background: #72b72f;
+
+			&:before{
+				width: 100%;
+				@include transition(all ease-in-out 0.4s);
+
+				animation-name: bgSubmit;
+				animation-iteration-count:1;
+				animation-timing-function:ease-in-out;
+				animation-fill-mode:forwards;
+				animation-delay:0.4s;
+				animation-duration:0.4s;
+			}
+		}
+
+		h1{
+			@include transform(translateY(10px));
+			opacity: 0;
+		}
+		
+		.feedback{
+			animation-name: fadeIn;
+			animation-iteration-count:1;
+			animation-timing-function:ease-in-out;
+			animation-fill-mode:forwards;
+			animation-delay:0.6s;
+			animation-duration:0.4s;
+			opacity: 0;
+
+			img{	
+			    width: 17px;
+    			margin-left: 6px;
+    			opacity: 0;
+    			animation-name: fadeIn;
+				animation-iteration-count:1;
+				animation-timing-function:ease-in-out;
+				animation-fill-mode:forwards;
+				animation-delay:0.7s;
+				animation-duration:0.4s;
+			
+			}
+		}
+		
+	}
+}
+
+
+.adressContent{
+	float: right;
+	width: 35%;
+
+	.adressBox{
+		display: block;
+		background: #f4f5f5;
+		padding:30px;
+		margin-bottom: 10px;
+
+		h1{
+			font-family: $font-sec;
+			font-weight: bold;
+			margin-bottom: 12px;
+			text-transform: uppercase;
+			font-size: 16px;
+			color: $color-secu;
+		}
+
+		ul{
+			li{
+				font-size: 13px;
+				line-height: 1.4;
+				margin-bottom: 20px;
+				padding-left: 30px;
+				color: #767a7e;
+				
+				&.local{
+					background: url(../imgs/ico_local_gray.png) 0 3px no-repeat;
+				}
+				&.tell{
+					background: url(../imgs/ico_tel_gray.png) 0 0 no-repeat;
+				}
+				&.email{
+					background: url(../imgs/ico_email_gray.png) 0 3px no-repeat;
+				}
+			}
+		}
+		@media (max-width : 680px){
+			width: 100% !important;
+		}
+	}
+
+	@media (max-width : 1024px){
+	    margin-top: 30px;
+	    width: 100%;
+
+	    .adressBox{
+	    	width: calc(50% - 7.5px);
+	    	float: left;
+
+	    	&:last-child{
+	    		float: right;
+	    	}
+	    }
+
+	}
+}
