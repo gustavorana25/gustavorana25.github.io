@@ -1,0 +1,376 @@
+.banner{
+	width: 100%;
+	height: 100%;
+	background-image: url(../imgs/banner.jpg);
+	background-position: center;
+	background-size:cover;
+	background-attachment: fixed;
+
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+	align-items: center;
+	-webkit-align-items: center;
+
+	.mouseIcon{
+		width: 35px;
+		height: 55px;
+		border-radius: 50px;
+		border: 3px solid white;
+
+		position: absolute;
+		bottom: 40px;
+		left: 50%;
+		@include transform(translateX(-50%));
+		z-index: 2;
+		text-align: center;
+
+		span{
+			display: inline-block;
+			width: 8px;
+			height: 12px;
+			border-radius:10px;
+			background: white;
+			margin-top: 6px;
+		}
+	}
+
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAUzGZH4MxkYGNJhAmAOSBIkAOeABABpLgOeuZzTDQAAAABJRU5ErkJggg==);
+		background-color:#171e22;
+		opacity: 0.8;
+		
+	}
+
+	img{
+		position: relative;
+		z-index: 2;
+		width: 50%;
+		max-width: 740px;
+	}
+
+	@media (max-width: $break-cellphone) {
+		background-image: url(../imgs/banner-mob.jpg);
+	}
+}
+
+.textBoxSection{
+	display: block;
+	padding: 100px 0;
+	font-weight: bold; 
+	background: #f5f5f5;
+
+	h1{
+		font-size: 55px;
+		text-align: center;
+		color: #333333;
+		text-transform: uppercase;
+		&.orange{
+			color: $color-base;
+		}
+	}
+
+	p{
+		font-size: 35px;
+		color: #777d87;
+		font-weight: 300;
+		line-height: 1.5;
+		margin-top: 40px;
+		text-align: center;
+		&.regularFont{
+			font-weight: 400;
+		}
+	}
+	.ass{
+		font-size: 25px;
+		text-align: right;
+		color: #777d87;
+		font-weight: 300;
+		margin-top: 20px;
+	}
+
+	@media (max-width: 1200px) {
+		padding: 70px 0;
+
+		h1{
+			font-size: 36px;
+		}
+
+		p{
+			font-size: 25px;
+			margin-top: 20px;
+		}
+	}
+
+	@media (max-width: $break-cellphone) {
+		padding: 50px 0;
+
+		h1{
+			font-size: 26px;
+		}
+
+		p{
+			font-size: 18px;
+			margin-top: 20px;
+		}
+	}
+	
+}
+
+.squareForm, .rectangleForm{
+	width: 50%;
+	height: 0;
+	position: relative;
+	float: left;
+	background-size:auto 110%;
+	background-position:center;
+	@include transition (background-size ease-in-out 0.4s);
+
+	&:hover{
+		background-size:auto 115%;
+	}
+}
+
+.squareForm{
+	padding-bottom: 50%;
+	background-image: url(../imgs/jobs-01.jpg);
+
+	@media screen and (max-width: $break-cellphone) {
+    	width: 100%;
+    	padding-bottom: 110%;
+    	background-size:cover;
+  	}
+}
+
+.rectangleForm{
+	padding-bottom: 25%;
+
+	&.job2{
+		background-image: url(../imgs/jobs-02.jpg);
+	}
+
+	&.job3{
+		background-image: url(../imgs/jobs-03.jpg);
+	}
+
+	@media screen and (max-width: $break-cellphone) {
+    	width: 100%;
+    	padding-bottom: 100%;
+    	background-size:cover;
+  	}
+}
+
+.internalContent{
+	position: absolute;
+	top: 0;left: 0;bottom: 0;right: 0;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+	align-items: center;
+	-webkit-align-items: center;
+	@include transition(all ease-in-out 0.2s);
+
+	h1{
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 45px;
+		text-align: center;
+		font-weight: bold;
+		line-height: 1;
+		@include transform(translateY(-20px));
+		opacity: 0;
+		@include transition(all ease-in-out 0.3s);
+
+		@media screen and (max-width: 1200px) {
+			font-size: 35px;
+		}
+
+		@media screen and (max-width: 960px) {
+			font-size: 30px;
+		}
+	}
+	h3{
+		color: #fff;
+		font-size: 20px;
+		margin-top: 35px;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 4px;
+		@include transform(translateY(-20px));
+		opacity: 0;
+		@include transition(all ease-in-out 0.4s);
+
+		@media screen and (max-width: 1200px) {
+			font-size: 14px;
+			margin-top: 18px;
+		}
+
+		@media screen and (max-width: 960px) {
+			font-size: 12px;
+    		margin-top: 14px;
+		}
+	}
+
+	.button{
+		padding: 30px 0;
+		text-transform: uppercase;
+		font-size: 20px;
+		text-align: center;
+		display: block;
+		width: 320px;
+		margin: 0 auto;
+		color: #fff;
+		letter-spacing: 4px;
+		margin-top: 50px;
+		position: relative;
+		border:3px solid white;
+		@include transition(all ease-in-out 0.4s);
+		
+		opacity: 0;
+		@include transform(translateY(20px));
+
+
+		@media screen and (max-width: 1200px) {
+		    padding: 20px 0;
+			margin-top: 35px;
+			width: 250px;
+			font-size: 18px;
+		}
+
+		@media screen and (max-width: 960px) {
+		    padding: 12px 0;
+			margin-top: 30px;
+			width: 200px;
+			font-size: 14px;
+		}
+	}
+
+	&:hover{
+		background: rgba(246,167,18,0.9);
+
+		h1, h3, .button {
+			@include transform(translateY(0));
+			opacity: 1;
+		}
+	}
+}
+
+.clientsList{
+	margin-top: 100px;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	justify-content: center;
+	-webkit-justify-content: center;
+
+	div{
+		float: left;
+		min-width: 280px;
+		height: 150px;
+		background: #fff;
+		margin: 10px;
+
+		display: flex;
+		display: -webkit-flex;
+		justify-content: center;
+		-webkit-justify-content: center;
+		align-items: center;
+		-webkit-align-items: center;
+
+		
+		img{
+			-webkit-filter: grayscale(100%); 
+    		filter: grayscale(100%);
+    		opacity: 0.7;
+			@include transform(scale(0.95));
+    		@include transition(all ease-in-out 0.2s);
+		}
+
+		&:hover img{
+			-webkit-filter: grayscale(0%); 
+    		filter: grayscale(0%);
+    		opacity: 1;
+    		@include transform(scale(1));
+		}
+	}
+	
+	@media (max-width: 1200px) {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: $break-cellphone) {
+	.notMobile{
+		display: none !important;
+	}
+}
+
+
+.instaContent{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+
+	@media (max-width: $break-cellphone) {
+    	display: none;
+  	}
+}
+
+#instafeed{
+	position: relative;
+	height: 100%;
+
+	@include transition(all ease-in-out 0.8s);
+}
+
+.instagramPhoto{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background-size:cover;
+	background-position:center;
+	float: left;
+	overflow: hidden;
+
+	&:after{
+		content: '';
+		position: absolute;
+		top: -50px;
+		left: -50px;
+		bottom: -50px;
+		right: -50px;
+		background: url(../imgs/ico_instagram.png) center no-repeat rgba(246,167,18,0.9);
+		opacity: 0; 
+
+		@include transition(all ease-in-out 0.2s);
+		@include transform(rotate(-30deg));
+
+		animation-name: rotateInstaOut;
+		animation-iteration-count: 1;
+		animation-duration:0.15s;
+		animation-fill-mode: forwards;
+		animation-timing-function: linear;
+	}
+
+	
+	&:hover:after{
+		opacity: 1;
+		animation-name: rotateInsta;
+		animation-iteration-count: 1;
+		animation-duration:0.3s;
+		animation-fill-mode: forwards;
+		animation-timing-function: linear;
+
+	}
+}

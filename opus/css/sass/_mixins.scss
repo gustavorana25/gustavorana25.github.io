@@ -1,0 +1,93 @@
+@mixin box-sizing($e) {
+	-webkit-box-sizing: $e;
+	-moz-box-sizing: $e;
+  	box-sizing: $e; 
+}
+
+@mixin touch-callout($e){
+	-webkit-touch-callout: $e;
+}
+@mixin font-smoothing($e){
+	-webkit-font-smoothing: $e;
+	font-smoothing: $e;
+}
+@mixin text-size-adjust($e){
+	-webkit-text-size-adjust: $e;
+	-moz-text-size-adjust: $e;
+	text-size-adjust: $e;
+}
+@mixin tap-highlight-transparent(){
+	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+}
+@mixin user-select($e){
+	-webkit-user-select: $e;
+	-moz-user-select: $e;
+	-ms-user-select: $e;
+	user-select: $e;
+}
+@mixin transition($e){
+	-webkit-transition: $e;
+	-moz-transition: $e;
+	-ms-transition: $e;
+	transition: $e;
+}
+
+@mixin transform($e){
+	-webkit-transform: $e;
+	-moz-transform: $e;
+	-ms-transform: $e;
+	transform: $e;
+}
+
+@mixin centralize-contentflex(){
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+
+@mixin display-flex(){
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+}
+
+@mixin align-itens-center(){
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+@mixin justify-content-center(){
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+
+@mixin flex-direction($e){
+	-webkit-flex-direction: $e;
+	-moz-flex-direction: $e;
+	-ms-flex-direction: $e;
+	flex-direction: $e;
+}
+
+@mixin flex-wrap($e){
+	-webkit-flex-wrap: $e;
+	-moz-flex-wrap: $e;
+	-ms-flex-wrap: $e;
+	flex-wrap: $e;
+}

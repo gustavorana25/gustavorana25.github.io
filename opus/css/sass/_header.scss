@@ -1,0 +1,153 @@
+ .menuButton{
+	background: rgba(0,0,0,0.3);
+	position: fixed;
+	left: 150px;
+	top: 60px;
+	z-index: 5;
+	@include transition(all ease-in-out 0.4s);
+	width: 51px;
+	height: 51px;
+
+	&.active{
+		left: 0;
+		top: 0;
+		padding: 60px 0 0 150px ;
+		width: 130%;
+		height: 130%;
+		background: rgba(40,40,46,0.98);
+
+		img{
+			opacity: 0 !important;
+			pointer-events:none;
+		}
+	}
+
+	img{
+		position: absolute;
+		left: 60px;
+		top: 50%;
+		@include transform(translateY(-50%));
+		@include transition(all ease-in-out 0.4s);
+		opacity: 0;
+
+		&.active{
+			opacity: 1;
+		}
+	}
+
+	@media screen and (max-width: 680px) {
+    	left: 20px;
+		top: 20px;
+
+		img{
+			opacity: 0 !important;
+			pointer-events:none;
+		}
+
+		&.active{
+			padding: 20px 0 0 20px ;
+		}
+  	}
+}
+
+.menuIcon{
+	width: 51px;
+	height: 51px;
+	z-index: 6;
+	padding: 13px;
+	cursor: pointer;
+
+	& > div{
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	span{
+		width: 25px;
+		height: 4px;
+		background: white;
+		border-radius: 10px;
+		position: absolute;
+		left: 0;
+
+		@include transition(all ease-in-out 0.3s);
+		
+		&.a{
+			top: 0;
+		}
+
+		&.b{
+			top: 10.4px;
+			left: 50%;
+			@include transform(translateX(-50%));
+		}
+
+		&.c{
+			bottom: 0;
+		}
+	}
+
+	&.active{
+		span{
+			&.a{
+				transform: rotate(45deg);
+			    top: 11px;
+			    width: 33px;
+			    left: -4px;
+			}
+			&.b{
+				width: 0;
+			}
+			&.c{
+				transform: rotate(-45deg);
+			    bottom: 10px;
+			    width: 33px;
+			    left: -4px;
+			}
+		}
+	}
+}
+
+.menuLinks{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 5;
+	@include transform(translate(-50%,-50%));
+
+	a{
+		display: block;
+		font-weight: 300;
+		color: white;
+		font-size: 40px;
+		line-height: 1.5;
+		margin-bottom: 50px;
+		text-decoration: none;
+		text-align: center;
+		opacity: 0;
+		@include transform(translateY(30px));
+
+		animation-name: fadeIn;
+		animation-iteration-count: 1;
+		animation-duration:0.2s;
+		animation-fill-mode: forwards;
+		animation-timing-function: linear;
+
+		&:nth-child(1){animation-delay:0.2s;}
+		&:nth-child(2){animation-delay:0.25s;}
+		&:nth-child(3){animation-delay:0.3s;}
+		&:nth-child(4){animation-delay:0.35s;}
+		&:nth-child(5){animation-delay:0.4s;}
+		&:nth-child(6){animation-delay:0.45s;}
+		&:nth-child(7){animation-delay:0.5s;}
+		&:nth-child(8){animation-delay:0.55s;}
+		&:nth-child(9){animation-delay:0.6s;}
+		&:nth-child(10){animation-delay:0.65s;}
+
+		@media screen and (max-width: $break-cellphone) {
+			font-size: 36px;
+			margin-bottom: 35px;
+		}
+	}
+}

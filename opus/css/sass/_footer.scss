@@ -1,0 +1,160 @@
+.footerTop{
+	position: relative;
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+
+	.content{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 50%;
+		background: rgba(40,40,46,0.94);
+		padding: 20px;
+
+		display: flex;
+		display: -webkit-flex;
+		justify-content: center;
+		-webkit-justify-content: center;
+		align-items: center;
+		-webkit-align-items: center;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+
+		h1{
+			color: #fff;
+			font-size: 50px;
+			font-weight: bold;
+			margin-bottom: 40px;
+			text-transform: uppercase;
+		}
+
+		h3{
+			color: #fff;
+			font-size: 22px;
+			font-weight: 300;
+			margin-bottom: 15px;
+			span{font-size: 16px}
+		}
+
+		p{
+			color: #fff;
+			font-size: 18px;
+			font-weight: 300;
+			margin-bottom: 5px;
+
+			&.f{
+				margin-top: 35px;
+			}
+		}
+
+		@media (max-width: 1200px) {
+			h1{
+				font-size: 40px;
+				margin-bottom: 25px;
+			}
+			h3{
+			    font-size: 18px;
+			    margin-bottom: 10px;
+			}
+		}
+	}
+
+	@media (max-width: $break-cellphone) {
+    	iframe{
+    		display: none;
+    	}
+    	.content{
+    		width: 100%;
+			
+			*{
+				text-align: center;
+			}
+    	}
+  	}
+}
+
+.footerBottom{
+	width: 100%;
+	height:120px;
+	background: #28282e;
+
+	.centralizeContent{
+		height: 100%;
+
+		& > img{
+			margin-right: 30px;
+			width: 145px;
+		}
+
+		& > h3{
+			font-size: 14px;
+			color: #fff;
+			display: inline-block;
+			margin-right: auto;
+		}
+
+		@media (max-width: 375px) {
+			flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			padding:12px 0;
+		    & > img{
+		    	margin: 0 40px;
+	    	}
+
+		    .redes{
+		    	margin-left: 0;
+		    }
+	  	}
+	}
+
+}
+
+.redes{
+	position: relative;
+	display: inline-block;
+	margin-left: auto;
+	a{
+		padding: 5px;
+		position: relative;
+		display: inline-block;
+		z-index: 2;
+		margin-right: 20px;
+	
+		&:hover:after{
+			content: '';
+			width: 11px;
+			height: 11px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			box-shadow: 3px 0px 25px 0px white;
+			border-radius: 50%;
+			background: rgba(255, 255, 255, 0.16);
+			z-index: 1;
+		}
+
+		img{
+			max-width: 28px;
+			max-height: 28px;
+		}
+
+		&.call{
+			display: none;
+		}
+
+		@media (max-width: $break-cellphone) {
+			margin-right: 2px;
+
+			&.call{
+				display: inline-block;
+			}
+		}
+	}
+
+}

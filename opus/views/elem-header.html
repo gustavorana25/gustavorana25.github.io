@@ -1,0 +1,18 @@
+	
+<div ng-class="{'active' : showMenu}" class="menuButton">
+
+	<div ng-click="set_showMenu(!showMenu)" ng-class="{'active' : showMenu}" class="menuIcon">
+		<div>
+			<span class="a"></span>
+			<span class="b"></span>
+			<span class="c"></span>
+		</div>
+	</div>
+</div>
+	
+<nav ng-if="showMenu" class="menuLinks">
+	<a href="#">Home</a>
+	<a href="#">Agência</a>
+	<a href="#">Serviços</a>
+	<a href="#">Cases</a>
+</nav>
